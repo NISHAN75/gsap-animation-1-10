@@ -49,20 +49,75 @@ gsap.registerPlugin(ScrollTrigger);
 //   .to(".box" , {y:200 , duration: 2})
 //   .to(".box", {x:0 , duration: 2})
 
-const tl = gsap.timeline({
-	scrollTrigger:{
-		trigger:".box",
-	    markers:true,
-		start: "top 80%",
-		end: "top 30%",
-		scrub:1
-	}
-});
+// const tl = gsap.timeline({
+// 	scrollTrigger:{
+// 		trigger:".box",
+// 	    markers:true,
+// 		start: "top 80%",
+// 		end: "top 30%",
+// 		scrub:1
+// 	}
+// });
 
-tl.to(".box" , {x:500 , duration:5})
-  .to(".box" , {y:200 , duration:2})
-  .to(".box" , {x:0 , duration:2})
+// tl.to(".box" , {x:500 , duration:5})
+//   .to(".box" , {y:200 , duration:2})
+//   .to(".box" , {x:0 , duration:2})
 
+// ScrollTrigger.create({
+// 	trigger:".box",
+// 	start:"top 80%",
+// 	end:"top 50%",
+// 	markers: true,
+// 	toggleClass:"red"
+// });
+
+// ScrollTrigger.create({
+// 	markers:true,
+// 	start:"top 6%",
+// 	end: "top 50%",
+// 	// trigger:".panel",
+// 	// toggleClass: { targets:"nav" , className:"nav-active" },
+// 	trigger:".box",
+// 	onUpdate: (self) => console.log(self)
+	
+// 	// onEnter:() => console.log("enter"),
+// 	// onLeave:() => console.log("onLeave"),
+// 	// onEnterBack:() => console.log("onEnterBack"),
+// 	// onLeaveBack:() => console.log("onLeaveBack"),
+// })
+
+
+// const tl = gsap.timeline();
+
+// tl.to(".box" , {x:500 , duration:5})
+//   .to(".box" , {y:200 , duration:2})
+// //   .addLabel("rotate")
+//   .to(".box" , {rotate:90 , repeat:5, ease:'bounce'})
+
+
+//   tl.addLabel('rotate' , 8)
+//   tl.paly("rotate")
+
+
+// //   ScrollTrigger.create({
+// // 	animation:tl,
+// // 	trigger:".box",
+// // 	start: "top center"
+// //   })
+
+
+gsap.utils.toArray("span").forEach((span) =>{
+	ScrollTrigger.create({
+	  trigger: span,
+	  start: "top 50%",
+	  end: "top 20%",
+	//   toggleClass: "active",
+	onEnter:()=>{
+		span.classList.add("active")
+	},
+	  markers:true
+	})
+})
 
 
 

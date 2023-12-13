@@ -238,7 +238,7 @@ label {
 
 
 /* main css dsign start */
-.div1 , .div2{
+/* .div1 , .div2{
 	height: 100vh;
 }
 .div1{
@@ -246,7 +246,7 @@ label {
 }
 /* .div2{
 	background-color: salmon;
-} */
+} 
 .square{
 	width: 150px;
 	height: 20vh;
@@ -258,9 +258,7 @@ label {
 	background-color: green;
 
 }
-.red{
-	background-color: red;
-}
+
 .box{
 	width: 100px;
 	height: 100px;
@@ -269,6 +267,62 @@ label {
 .panel{
 	height: 100vh;
     background-color: beige;
+}
+.red{
+	background-color: red;
+}
+*/
+/* 
+nav{
+	position: sticky;
+	top: 0;
+	transition: all 600ms ease-in-out;
+	background-color: tan;
+}
+
+ul{
+	margin: 0;
+	padding: 40px;
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+}
+li{
+	margin-right: 60px;
+}
+.panel{
+	background-color: tan;
+	height: 100vh;
+}
+.nav-active{
+	background-color: white;
+	color: black;
+}
+
+p{
+	padding-top: 50px;
+	margin: 0 auto;
+	max-width: 1200px;
+} */
+
+
+.box{
+	width: 100px;
+	height: 100px;
+	background-color: steelblue;
+}
+.fullscreen{
+	height: 100vh;
+}
+
+.active{
+	background: radial-gradient(circle at 3.1% 8.2%, rgb(248, 250, 107) 0%, rgb(238, 148, 148) 98.2%);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transition: background-size 1s ease-in;
+}
+.active:hover{
+	background-size: 100% 100%;
 }
 /* main css dsign end */
 
